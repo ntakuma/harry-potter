@@ -1,0 +1,121 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/*"bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables" */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$yellow: #E8DA06;
+
+* {
+	font-family: 'Aladin', cursive;
+	text-align: center; 
+}
+
+h1 {
+	margin: 30px;
+}
+
+h2 {
+	margin: 20px;
+}
+
+.navbar {
+	font-size: 15px;
+	position: fixed;
+	width: 100%;
+	z-index: 999999;
+	border-color: white;
+}
+
+.row {
+	background-color: black;
+}
+
+.navbar-brand,
+.navbar-nav li a  {
+	color: $yellow !important;
+}
+
+
+#welcome {
+	padding-top: 70px;
+	text-align: center;
+
+	h1 {
+		color: $yellow;
+	}
+}
+
+#students {
+
+	background-color: white !important; 
+
+	.ron,
+	.harry,
+	.hermione {
+		background-image: url(asset_path('HPCharacterSprite.jpg'));
+		margin: 0 auto;
+		border-radius: 50%;
+		height: 100px;
+		width: 100px;
+	}
+
+	.ron {
+		background-position: 100px 200px;
+	}
+
+	.harry {
+		background-position: 100px 300px;
+	}
+
+	.hermione {
+		background-position: 200px 100px;
+	}
+}
+
+.container {
+	background-color: black !important;
+}
+
+#houses {
+	color: $yellow !important;
+
+	.gryffindor,
+	.hufflepuff,
+	.ravenclaw,
+	.slytherin {
+		background-image: url(asset_path('HogwartsHouses.png'));
+		margin: 0 auto;
+		height: 250px;
+		width: 200px;
+	}
+
+	.hufflepuff {
+		background-position: 400px 240px;
+	}
+
+	.ravenclaw {
+    background-position: 200px 0px;
+	}
+
+	.slytherin {
+		background-position: 200px 240px;
+	}
+
+}
+
+
